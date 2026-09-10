@@ -1,0 +1,42 @@
+# RAG 项目 · 忽略项
+
+# 虚拟环境（体积大，不进版本管理）
+.venv/
+venv/
+env/
+ENV/
+
+# PyCharm / 编辑器
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# 数据文件（大文件，参考本地生成）
+# 注意：data/book.txt 是从 PDF 提取的、约 1MB，可选择是否入库
+data/*.txt
+data/*.pdf
+
+# 向量库持久化目录（运行时生成，很大）
+chroma_db/
+*.sqlite3
+*.db
+
+# 模型文件
+models/
+*.bin
+*.safetensors
+
+# 环境变量
+.env
+
+# 日志
+*.log
