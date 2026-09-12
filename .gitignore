@@ -13,6 +13,10 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Obsidian（本机笔记软件配置，不进仓库）
+.obsidian/
+*.base
+
 # Python 缓存
 __pycache__/
 *.py[cod]
@@ -20,10 +24,12 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 
-# 数据文件（大文件，参考本地生成）
-# 注意：data/book.txt 是从 PDF 提取的、约 1MB，可选择是否入库
+# 数据文件（都是"派生产物"，跑脚本就能重新生成，不进版本管理）
+#   book.txt                    ← D3 从 PDF 提取
+#   chapters.json / chunks.json ← D4 切分产生
 data/*.txt
 data/*.pdf
+data/*.json
 
 # 向量库持久化目录（运行时生成，很大）
 chroma_db/
