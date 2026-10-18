@@ -148,8 +148,9 @@ if __name__ == '__main__':
         ))
 
         print('\n--- 测试 3：问不存在的概念（看会不会瞎编）---')
+
         print(ask_llm(
-            prompt='什么是"量子神经网络火锅"？',
+            prompt='什么时候上火星"？',
             system_prompt='只根据你的知识回答；如果这个概念不存在，就直接说不存在。',
             verbose=True,
         ))
